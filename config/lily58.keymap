@@ -58,11 +58,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp F12     &kp F1    &kp F2         &kp F3            &kp F4                &kp F5                      &kp F6         &kp F7          &kp F8                &kp F9                 &kp F10       &kp F11
-&trans      &trans    &kp LESS_THAN  &kp GREATER_THAN  &trans                &trans                      &kp AMPERSAND  &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT   &kp K_MUTE
-&kp DELETE  &kp EXCL  &kp MINUS      &kp PLUS          &kp EQUAL             &kp HASH                    &kp PIPE       &kp COLON       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &kp C_VOLUME_UP
-&trans      &trans    &kp SLASH      &kp ASTERISK      &kp NON_US_BACKSLASH  &trans    &trans    &trans  &kp TILDE      &kp DOLLAR      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &kp C_VOL_DN
-                                     &trans            &trans                &trans    &trans    &trans  &trans         &trans          &trans
+&kp F12     &kp F1    &kp F2         &kp F3            &kp F4         &kp F5                      &kp F6         &kp F7          &kp F8                &kp F9                 &kp F10       &kp F11
+&trans      &trans    &kp LESS_THAN  &kp GREATER_THAN  &trans         &trans                      &kp AMPERSAND  &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT   &kp K_MUTE
+&kp DELETE  &kp EXCL  &kp MINUS      &kp PLUS          &kp EQUAL      &kp HASH                    &kp PIPE       &kp COLON       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &kp C_VOLUME_UP
+&trans      &trans    &kp SLASH      &kp ASTERISK      &kp BACKSLASH  &trans    &trans    &trans  &kp TILDE      &kp DOLLAR      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &kp C_VOL_DN
+                                     &trans            &trans         &trans    &trans    &trans  &trans         &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

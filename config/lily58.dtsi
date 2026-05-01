@@ -1,0 +1,17 @@
+/ {
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        anin0_split: anin0_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
+    };
+
+    anin0_listener: anin0_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&anin0_split>;
+    };
+};

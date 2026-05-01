@@ -1,0 +1,5 @@
+#include "lily58.dtsi"
+
+&anin0_listener {
+    status = "okay";
+};

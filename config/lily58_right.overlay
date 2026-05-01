@@ -1,3 +1,4 @@
+#include "lily58.dtsi"
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &adc {
@@ -31,9 +32,8 @@
             input-code = <INPUT_REL_Y>;
         };
     };
+};
 
-    anin0_listener: anin0_listener {
-        compatible = "zmk,input-listener";
-        device = <&anin0>;
-    };
+&anin0_split {
+    device = <&anin0>;
 };

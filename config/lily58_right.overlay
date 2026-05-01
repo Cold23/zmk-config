@@ -1,5 +1,6 @@
 #include "lily58.dtsi"
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <dt-bindings/zmk/input_transform.h>
 
 &adc {
     status = "okay";
@@ -14,7 +15,7 @@
             io-channels = <&adc 7>;     /* AIN7 -> P0.31 */
             mv-mid = <1630>;
             mv-min-max = <1550>;
-            mv-deadzone = <40>;
+            mv-deadzone = <200>;
             scale-multiplier = <1>;
             scale-divisor = <55>;
             evt-type = <INPUT_EV_REL>;
@@ -25,7 +26,7 @@
             io-channels = <&adc 5>;     /* AIN5 -> P0.29 */
             mv-mid = <1630>;
             mv-min-max = <1550>;
-            mv-deadzone = <40>;
+            mv-deadzone = <200>;
             scale-multiplier = <1>;
             scale-divisor = <55>;
             evt-type = <INPUT_EV_REL>;
@@ -36,4 +37,5 @@
 
 &anin0_split {
     device = <&anin0>;
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 };

@@ -35,7 +35,7 @@
         sampling-hz = <100>;
 
         x-ch {
-            io-channels = <&adc 0>;
+            io-channels = <&adc 1>;
             mv-mid = <2000>;
             mv-min-max = <1600>;
             mv-deadzone = <150>;
@@ -46,7 +46,7 @@
         };
 
         y-ch {
-            io-channels = <&adc 1>;
+            io-channels = <&adc 0>;
             mv-mid = <2000>;
             mv-min-max = <1600>;
             mv-deadzone = <150>;
@@ -60,5 +60,4 @@
 
 &anin0_split {
     device = <&anin0>;
-    input-processors = <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
 };

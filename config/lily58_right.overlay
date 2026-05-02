@@ -60,4 +60,5 @@
 
 &anin0_split {
     device = <&anin0>;
+    input-processors = <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
 };

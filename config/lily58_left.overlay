@@ -1,5 +1,12 @@
 #include "lily58.dtsi"
+#include <input/processors.dtsi>
 
 &anin0_listener {
     status = "okay";
+    input-processors = <&zip_xy_scaler 0 1>;
+
+    mouse_active {
+        layers = <3>;
+        input-processors = <&zip_xy_scaler 1 1>;
+    };
 };

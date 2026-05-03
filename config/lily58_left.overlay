@@ -5,9 +5,15 @@
     status = "okay";
     input-processors = <&zip_temp_layer 3 300>;
 
+    mouse_scroll {
+        layers = <5>;
+        process-next;
+        input-processors = <&zip_xy_to_scroll_mapper>;
+    };
+
     mouse_slow {
         layers = <4>;
         process-next;
-        input-processors = <&zip_xy_scaler 1 4>;
+        input-processors = <&zip_xy_scaler 1 3>;
     };
 };

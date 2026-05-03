@@ -3,15 +3,11 @@
 
 &anin0_listener {
     status = "okay";
-    input-processors = <&zip_xy_scaler 0 1>;
+    input-processors = <&zip_temp_layer 3 300>;
 
     mouse_slow {
         layers = <4>;
+        process-next;
         input-processors = <&zip_xy_scaler 1 4>;
-    };
-
-    mouse_active {
-        layers = <3>;
-        input-processors = <&zip_xy_scaler 1 1>;
     };
 };

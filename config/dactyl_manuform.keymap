@@ -13,42 +13,51 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // 4 main rows + 2 thumb rows. Per side:
-            //   Row 0:  Esc   Q    W    E    R    T
-            //   Row 1:  Tab   A    S    D    F    G
-            //   Row 2:  Shft  Z    X    C    V    B
-            //   Row 3 (4 keys):            Ctrl Gui  Mo1  Space
-            //   Row 4 (4 keys):            Alt  Esc  Bspc Enter
-            // (right side mirrors)
+            // Lily58-derived, number row dropped. 4 main rows + 2 thumb rows.
+            //   Row 0:  Tab   Q  W  E  R  T   |   Y  U  I  O  P  -
+            //   Row 1:  Bksp  A  S  D  F  G   |   H  J  K  L  ;  '
+            //   Row 2:  LShft Z  X  C  V  B   |   N  M  ,  .  /  \
+            //   Row 3 (near thumbs 4 per side):     trans LShft Space Mo1   |   LCtl Mo2 LWin trans
+            //   Row 4 (deep thumbs 2x2 per side):   LWin  LAlt  trans trans |   LAlt Enter trans trans
 
             bindings = <
-&kp ESC    &kp Q   &kp W      &kp E     &kp R     &kp T                          &kp Y      &kp U      &kp I      &kp O      &kp P     &kp MINUS
-&kp TAB    &kp A   &kp S      &kp D     &kp F     &kp G                          &kp H      &kp J      &kp K      &kp L      &kp SEMI  &kp SINGLE_QUOTE
-&kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B                          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH  &kp BACKSLASH
-                   &kp LCTRL  &kp LGUI  &mo 1     &kp SPACE                      &kp BSPC   &mo 2      &kp RGUI   &kp RCTRL
-                   &kp LALT   &kp ESC   &kp BSPC  &kp ENTER                      &kp ENTER  &kp DEL    &kp HOME   &kp RALT
+&kp TAB        &kp Q  &kp W       &kp E      &kp R       &kp T                                                 &kp Y      &kp U       &kp I      &kp O      &kp P     &kp MINUS
+&kp BACKSPACE  &kp A  &kp S       &kp D      &kp F       &kp G                                                 &kp H      &kp J       &kp K      &kp L      &kp SEMI  &kp SINGLE_QUOTE
+&kp LSHFT      &kp Z  &kp X       &kp C      &kp V       &kp B                                                 &kp N      &kp M       &kp COMMA  &kp DOT    &kp FSLH  &kp BACKSLASH
+                      &trans      &kp LSHFT  &kp SPACE   &mo 1                                                 &kp LCTRL  &mo 2       &kp LWIN   &trans
+                      &kp LWIN    &kp LALT   &trans      &trans                                                &kp LALT   &kp ENTER   &trans     &trans
             >;
         };
 
         lower_layer {
-            // numbers + BT + nav
+            // Lily58 lower, number row dropped.
+            //   Row 0:  BT0  BT1   7  8  9  [   |   ]   trans  Up    trans trans  +
+            //   Row 1:  BT2  BTCLR 4  5  6  (   |   )   Left   Down  Right -     |
+            //   Row 2:  ___  ___   1  2  3  0   |   }   trans  trans trans =     _
+            //   Row 3/4 (thumbs): all trans
+
             bindings = <
-&kp GRAVE     &kp N1        &kp N2  &kp N3  &kp N4   &kp N5                                       &kp N6   &kp N7    &kp N8     &kp N9    &kp N0     &kp DEL
-&bt BT_SEL 0  &bt BT_SEL 1  &kp F2  &kp F3  &kp F4   &kp F5                                       &kp F6   &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT  &kp F12
-&bt BT_SEL 2  &bt BT_CLR    &kp F8  &kp F9  &kp F10  &kp F11                                      &kp F7   &kp HOME  &kp PG_DN  &kp PG_UP &kp END    &kp PIPE
-                            &trans  &trans  &trans   &trans                                       &trans   &trans    &trans     &trans
-                            &trans  &trans  &trans   &trans                                       &trans   &trans    &trans     &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &kp N7  &kp N8  &kp N9  &kp LEFT_BRACKET                                       &kp RIGHT_BRACKET      &trans     &kp UP_ARROW  &trans      &trans         &kp PLUS
+&bt BT_SEL 2  &bt BT_CLR    &kp N4  &kp N5  &kp N6  &kp LEFT_PARENTHESIS                                   &kp RIGHT_PARENTHESIS  &kp LEFT   &kp DOWN      &kp RIGHT   &kp MINUS      &kp PIPE
+&trans        &trans        &kp N1  &kp N2  &kp N3  &kp N0                                                 &kp RIGHT_BRACE        &trans     &trans        &trans      &kp EQUAL      &kp UNDER
+                            &trans  &trans  &trans  &trans                                                 &trans                 &trans     &trans        &trans
+                            &trans  &trans  &trans  &trans                                                 &trans                 &trans     &trans        &trans
             >;
         };
 
         raise_layer {
-            // lily58 raise, number row dropped
+            // Lily58 raise, number row dropped.
+            //   Row 0:  ___  ___    <    >    ___    ___    |   &    _      [     ]      %      Mute
+            //   Row 1:  Del  !      -    +    =      #      |   |    :      (     )      ?      Vol+
+            //   Row 2:  ___  ___    /    *    \      ___    |   ~    $      {     }      @      Vol-
+            //   Row 3/4 (thumbs): all trans
+
             bindings = <
 &trans      &trans    &kp LESS_THAN  &kp GREATER_THAN  &trans         &trans                                       &kp AMPERSAND  &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT   &kp K_MUTE
 &kp DELETE  &kp EXCL  &kp MINUS      &kp PLUS          &kp EQUAL      &kp HASH                                     &kp PIPE       &kp COLON       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &kp C_VOLUME_UP
 &trans      &trans    &kp SLASH      &kp ASTERISK      &kp BACKSLASH  &trans                                       &kp TILDE      &kp DOLLAR      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &kp C_VOL_DN
-                                     &trans            &trans         &trans    &trans                  &trans     &trans         &trans          &trans
-                                     &trans            &trans         &trans    &trans                  &trans     &trans         &trans          &trans
+                                     &trans            &trans         &trans     &trans                  &trans    &trans         &trans          &trans
+                                     &trans            &trans         &trans     &trans                  &trans    &trans         &trans          &trans
             >;
         };
     };

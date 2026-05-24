@@ -24,7 +24,7 @@
 &kp ESCAPE     &kp Q  &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O    &kp P     &kp MINUS
 &kp BACKSPACE  &kp A  &kp S      &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
 &kp TAB        &kp Z  &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                      &trans     &kp LSHFT  &kp LSHFT  &kp SPACE  &mo 2      &kp LWIN   &kp LWIN   &trans
+                      &kp TAB    &kp LSHFT  &kp LSHFT  &kp SPACE  &mo 2      &kp LWIN   &kp LWIN   &trans
                       &kp LCTRL  &kp LALT   &kp LWIN   &mo 1      &kp LCTRL  &kp ENTER  &kp LALT   &trans
             >;
         };
@@ -53,7 +53,7 @@
             //   Row 3/4 (thumbs): all trans
 
             bindings = <
-&trans      &trans    &kp LESS_THAN  &kp GREATER_THAN  &trans         &trans    &kp AMPERSAND  &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT   &kp K_MUTE
+&kp GRAVE   &trans    &kp LESS_THAN  &kp GREATER_THAN  &trans         &trans    &kp AMPERSAND  &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT   &kp K_MUTE
 &kp DELETE  &kp EXCL  &kp MINUS      &kp PLUS          &kp EQUAL      &kp HASH  &kp PIPE       &kp COLON       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &kp C_VOLUME_UP
 &trans      &trans    &kp SLASH      &kp ASTERISK      &kp BACKSLASH  &trans    &kp TILDE      &kp DOLLAR      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &kp C_VOL_DN
                       &trans         &trans            &trans         &trans    &trans         &trans          &trans                &trans

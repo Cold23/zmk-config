@@ -20,6 +20,6 @@
 ---
 include:
   - board: nice_nano@2.0.0//zmk
-    shield: lily58_left
+    shield: dactyl_manuform_left
   - board: nice_nano@2.0.0//zmk
-    shield: lily58_right
+    shield: dactyl_manuform_right

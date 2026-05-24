@@ -1,0 +1,55 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // 4 main rows + 2 thumb rows. Per side:
+            //   Row 0:  Esc   Q    W    E    R    T
+            //   Row 1:  Tab   A    S    D    F    G
+            //   Row 2:  Shft  Z    X    C    V    B
+            //   Row 3 (4 keys):            Ctrl Gui  Mo1  Space
+            //   Row 4 (4 keys):            Alt  Esc  Bspc Enter
+            // (right side mirrors)
+
+            bindings = <
+&kp ESC    &kp Q   &kp W      &kp E     &kp R     &kp T                          &kp Y      &kp U      &kp I      &kp O      &kp P     &kp MINUS
+&kp TAB    &kp A   &kp S      &kp D     &kp F     &kp G                          &kp H      &kp J      &kp K      &kp L      &kp SEMI  &kp SINGLE_QUOTE
+&kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B                          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH  &kp BACKSLASH
+                   &kp LCTRL  &kp LGUI  &mo 1     &kp SPACE                      &kp BSPC   &mo 2      &kp RGUI   &kp RCTRL
+                   &kp LALT   &kp ESC   &kp BSPC  &kp ENTER                      &kp ENTER  &kp DEL    &kp HOME   &kp RALT
+            >;
+        };
+
+        lower_layer {
+            // numbers + BT + nav
+            bindings = <
+&kp GRAVE     &kp N1        &kp N2  &kp N3  &kp N4   &kp N5                                       &kp N6   &kp N7    &kp N8     &kp N9    &kp N0     &kp DEL
+&bt BT_SEL 0  &bt BT_SEL 1  &kp F2  &kp F3  &kp F4   &kp F5                                       &kp F6   &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT  &kp F12
+&bt BT_SEL 2  &bt BT_CLR    &kp F8  &kp F9  &kp F10  &kp F11                                      &kp F7   &kp HOME  &kp PG_DN  &kp PG_UP &kp END    &kp PIPE
+                            &trans  &trans  &trans   &trans                                       &trans   &trans    &trans     &trans
+                            &trans  &trans  &trans   &trans                                       &trans   &trans    &trans     &trans
+            >;
+        };
+
+        raise_layer {
+            // symbols + function + media
+            bindings = <
+&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                                       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR   &kp DEL
+&trans     &kp F1    &kp F2  &kp F3    &kp F4      &kp F5                                            &kp F6     &kp UNDER  &kp LBRC   &kp RBRC  &kp PLUS   &kp K_MUTE
+&trans     &kp F7    &kp F8  &kp F9    &kp F10     &kp F11                                           &kp F12    &kp MINUS  &kp LBKT   &kp RBKT  &kp EQUAL  &kp C_VOL_UP
+                     &trans  &trans    &trans      &trans                                            &trans     &trans     &trans     &trans
+                     &trans  &trans    &trans      &trans                                            &trans     &trans     &trans     &kp C_VOL_DN
+            >;
+        };
+    };
+};

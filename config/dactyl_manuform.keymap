@@ -25,7 +25,7 @@
 &kp BACKSPACE  &kp A  &kp S       &kp D      &kp F       &kp G                                                 &kp H      &kp J       &kp K      &kp L      &kp SEMI  &kp SINGLE_QUOTE
 &kp LSHFT      &kp Z  &kp X       &kp C      &kp V       &kp B                                                 &kp N      &kp M       &kp COMMA  &kp DOT    &kp FSLH  &kp BACKSLASH
                       &trans      &kp LSHFT  &kp SPACE   &mo 1                                                 &kp LCTRL  &mo 2       &kp LWIN   &trans
-                      &kp LWIN    &kp LALT   &trans      &trans                                                &kp LALT   &kp ENTER   &trans     &trans
+                      &trans      &trans     &kp LWIN    &kp LALT                                              &kp LALT   &kp ENTER   &trans     &trans
             >;
         };
 

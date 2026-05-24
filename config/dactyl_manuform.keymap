@@ -25,7 +25,7 @@
 &kp BACKSPACE  &kp A  &kp S      &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
 &kp TAB        &kp Z  &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
                       &kp TAB    &kp LSHFT  &kp LSHFT  &kp SPACE  &mo 2      &kp LWIN   &kp LWIN   &trans
-                      &kp LCTRL  &kp LALT   &kp LWIN   &mo 1      &kp LCTRL  &kp ENTER  &kp LALT   &trans
+                      &kp LCTRL  &kp LALT   &kp LWIN   &mo 1      &kp LCTRL  &kp ENTER  &kp LALT   &mo 3
             >;
         };
 
@@ -58,6 +58,16 @@
 &trans      &trans    &kp SLASH      &kp ASTERISK      &kp BACKSLASH  &trans    &kp TILDE      &kp DOLLAR      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &kp C_VOL_DN
                       &trans         &trans            &trans         &trans    &trans         &trans          &trans                &trans
                       &trans         &trans            &trans         &trans    &trans         &trans          &trans                &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
